@@ -1,0 +1,510 @@
+@charset "UTF-8";
+.banner604 {
+    position: relative;
+}
+.banner604 a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 604px;
+    background: url(../images/banner.jpg) no-repeat top center;
+}
+.main {
+    position: relative;
+}
+/*轮播开始*/
+.btn {
+    background-color: #1b6d85;
+}
+
+ul{
+    list-style: none;
+}
+img {
+    vertical-align: top;
+/*取消3像素距离，或者display:block*/
+}
+/*搜索*/
+.search_fx{
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 55px;
+    border-bottom: 2px solid #f10214;
+    background-color: #fff;
+    box-shadow: 2px 2px 2px rgba(0,0,0,.2);
+    display: none;
+}
+.search_top{
+    margin: auto;
+    width: 1190px;
+    height: 50px;
+    position: relative;
+    z-index: 1;
+}
+.search_logo {
+    width: 125px;
+    height: 40px;
+    background-image: url('../images/JDdog.png');
+    text-indent: -999px;
+    position: absolute;
+    left:100px;
+    top:5px;
+}
+#shelper{
+    left: 320px;
+    width: 498px;
+}
+.search_top .form {
+    position: absolute;
+    right: 330px;
+    top: 5px;
+    width: 500px;
+    height: 45px;
+    overflow: hidden;
+}
+.search_top .text {
+    float:left;
+    margin-top: 5px;
+    outline: none;
+    left: 0;
+    padding: 4px;
+    width: 430px;
+    height: 25px;
+    border: 1px solid #B1191A;
+    line-height: 25px;
+    font-size: 14px;
+    color: #989898;
+        border-color: #efefef;
+    background-color: #efefef;
+}
+.search_top .button {
+    right: 0;
+    width: 50px;
+    height: 35px;
+    margin-top: 5px;
+    line-height: 35px;
+    border: none;
+    background-color: #B1191A;
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+}
+
+
+
+
+#fs{
+    width: 100%;
+    height: 480px;
+    position: relative;
+}
+#fs_main{
+    height: 100%;
+    width: 100%;
+    float: left; 
+}
+ #sliderBox{
+    margin: 0 258px 0 200px;
+    height: 340px;
+    width: 100%;
+    float: left;
+   /* background-color: pink;*/
+}
+
+
+#slider{
+    width:  790px;
+    height: 100%;
+    position:relative;
+    overflow: hidden;
+}
+
+#slider ul{
+    width: 3950px;
+    height:100%;
+    background-color: #4cae4c;
+    position: absolute;
+    left:0px;
+}
+#slider ul li{
+    float: left;
+    background-color: #5bc0de;
+}
+#slider a{
+ display: block;
+ float:left;
+}
+/*为量侧箭头设置*/
+#arr{
+    /*display: none;*/
+    z-index: 1;
+}
+#arr span{
+    width:30px; height:50px;
+    position:absolute;
+    left:200px;
+    top:30%;
+    margin-top:-15px;
+    background:#5e5e5e;
+    cursor:pointer;
+    line-height:50px;
+    text-align:center;
+    font-weight:bold;
+    font-family:'黑体';
+    font-size:20px;
+    color:#fff;
+    opacity:0.3;
+    border:1px solid #fff;}
+#arr #right{
+    right:268px;
+    left: auto;
+}
+/*原点CSS*/
+#circle{
+    position: absolute;
+    left: 45%;
+    z-index: 2;
+    margin-left: -60px;
+    top: 300px;
+}
+#circle span{
+    float: left;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-color: #FFF;
+    text-align: center;
+    line-height: 18px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+#circle ul .current{
+    background-color: red;
+}
+#circle ul span:hover{
+    /*background-color: #1b6d85;*/
+}
+
+/*轮播结束*/
+
+/*轮播脚本开始*/
+#slider_buttom{
+     height: 130px;
+     margin: 10px 258px 0 200px;
+    width: 790px;
+    float: left;  
+    overflow: hidden;
+}
+#slider_buttom .slider_buttomlef{
+    width: 390px;
+    height: 130px;
+    float: left;
+    margin-right: 10px;
+}
+#slider_buttom .slider_buttomrig{
+    width: 390px;
+    height: 130px;
+    float: left;  
+}
+/*轮播脚本结束*/
+
+/*左侧菜单开始*/
+.cate_menu  {
+    height: 100%;
+    width: 190px;
+    background-color: #6e6568;
+    padding:15px 0;
+    float:left;
+    margin-left: -100%;
+}
+.cate_menu .dd {
+  
+}
+.cate_menu li {
+    height: 31px;
+    line-height: 31px;
+    border-left: 1px solid #B61D1D;
+    padding-left: 10px;
+    color: #fff;
+    font-size: 15px;
+    font-family:"微软雅黑";
+}
+.cate_menu li:hover{
+background-color: #999395;
+}
+
+
+.cate_menu .items span {
+    padding: 0 4px;
+    font-size: 12px;
+}
+.cate_menu .items a {
+    font-size: 14px;
+    color: #fff;
+}
+.cate_menu .items a:hover {
+
+    color: #B1191A;
+}
+
+/*菜单详情*/
+.cate_detail{
+    position: absolute;
+    left: 8999px;
+    top: 0;
+    width: 998px;
+    min-height: 478px;
+    border: 1px solid #f7f7f7;
+    background-color: #f7f7f7;
+    box-shadow: 2px 0 5px rgba(0,0,0,.3); 
+    z-index: 99;
+    padding-left: 15px;
+}
+.cate_detail .cate_detail_title{
+    margin-top: 10px;
+    width: 100%;
+    height: 24px;
+    background-color: red;
+}
+.cate_detail .cate_detail_title a{
+    float: left;
+    margin-right: 10px;
+    padding: 0 10px;
+    height: 24px;
+    background-color: #6e6568;
+    line-height: 24px;
+    color: #fff;
+}
+.cate_detail .cate_detail_title span{
+margin-left: 5px;
+line-height: 24px;
+ font: 400 13px/13px simsun;
+
+}
+.cate_name{
+    margin-top: 20px;
+    width: 100%;
+ 
+}
+.cate_name .name_list{
+    width: 100%;
+    height: 16px;
+    margin-bottom: 20px;
+}
+.cate_detail a:hover{
+    color: #B1191A;
+}
+#cate_name a:hover{
+    color: #B1191A;
+}
+.cate_name .name_list a{
+    float: left;  
+    color: #666;
+    margin: 4px 0;
+    padding: 0 10px;
+    height: 16px;
+    line-height: 16px;
+    border-left: 1px solid #e0e0e0;
+}
+
+.name_list .name_first span{
+margin-left: 2px;
+line-height: 24px;
+font: 400 13px/13px simsun;
+}
+.cate_name .name_list .name_first{
+    width:80px;
+    height: 16px;
+    text-align: right;
+    font-weight: 700;
+    border-left: 0;
+    white-space: nowrap;
+}
+#cate_name .name_list .name_other{
+
+width: 100%;
+height: 16px;
+overflow: hidden;;
+}
+
+/*菜单结束*/
+
+/*new开始*/
+.news {
+    width: 248px;
+    height:100%;
+    border: 1px solid #E4E4E4;
+    float: left;
+    margin-top: 2px;
+    margin-left:-250px;
+}
+
+.jd-news {
+    height: 200px;
+    border-bottom: 1px dashed #E4E4E4;  /*虚线*/
+}
+.jd-news .dt, .lifeservi .dt {
+    height: 43px;
+    border-bottom: 1px dotted #E8E8E7; /*点线*/
+    line-height: 43px;
+}
+.jd-news .dt h3 ,.lifeservi .dt h3{
+    float: left;
+    font: 14px/43px "microsoft yahei";
+    color: #666;
+    padding-left: 15px;
+}
+.jd-news .dt a{
+    float: right;
+    font: 13px/43px "宋体";
+    margin-right:15px;
+}
+.jd-news .dd ul {
+    padding: 8px 0 0 15px;
+}
+.jd-news .dd li {
+    line-height: 28px;
+}
+.jd-news .dd li span {
+    font-weight: 700;
+    margin-right: 5px;
+
+}
+.lifeservi {
+    height:251px;
+    overflow: hidden;
+    width: 248px;
+}
+.lifeservi ul {
+    width: 252px;
+}
+.lifeservi ul li {
+    width: 62px;
+    height: 70px;
+    border: 1px solid #e4e4e4;
+    border-top: 0;
+    float: left;
+    margin-left: -1px;
+}
+.lifeservi  li a{
+    display: block;
+    height: 70px;
+    text-align: center;
+    padding-top: 44px;
+    position: relative;
+}
+.lifeservi  li  i{
+    position: absolute;
+    top:12px;
+    left:18px;
+    width: 25px;
+    height: 25px;
+    background: url(../images/icon_lifeserv.png) no-repeat left top;
+}
+
+.lifeservi-icon1 li  i :hover{
+    background-position: right top;
+}
+
+.lifeservi-icon2 a i{
+    background-position: left -25px;
+}
+.lifeservi-icon2 a i:hover{
+    background-position: right -25px;
+}
+.lifeservi-icon3 a i {
+    background-position: left -50px;
+}
+.lifeservi-icon3 a i:hover {
+    background-position: right -50px;
+}
+
+.lifeservi-icon4 a i {
+    background-position: left -75px;
+}
+.lifeservi-icon4 a i:hover {
+    background-position: right -75px;
+}
+.lifeservi-icon5 a i {
+    background-position: left -100px;
+}
+.lifeservi-icon5 a i:hover {
+    background-position: right -100px;
+}
+.lifeservi-icon6 a i {
+    background-position: left -125px;
+}
+.lifeservi-icon6 a i:hover {
+    background-position: right -125px;
+}
+.lifeservi-icon7 a i {
+    background-position: left -150px;
+}
+.lifeservi-icon7 a i:hover {
+    background-position: right -150px;
+}
+.lifeservi-icon8 a i{
+    background-position: left -250px;
+}
+.lifeservi-icon8 a i:hover {
+    background-position: right -250px;
+}
+
+.lifeservi-icon9 a i {
+    background-position: left -175px;
+}
+.lifeservi-icon9 a i:hover {
+    background-position: right -175px;
+}
+.lifeservi-icon10 a i {
+    background-position: left -200px;
+}
+.lifeservi-icon10 a i:hover {
+    background-position: right -200px;
+}
+.lifeservi-icon11 a i {
+    background-position: left -225px;
+}
+.lifeservi-icon11 a i:hover {
+    background-position: right -225px;
+}
+.lifeservi-icon12 a i {
+    background-position:left -250px;
+}
+.lifeservi-icon12 a i:hover {
+    background-position: right -250px;
+}
+
+
+
+
+.lifeservi .song {
+    background: url(../images/song.png) no-repeat right top;
+}
+
+/*11 huodong*/
+.todays {
+    position: relative;
+}
+.night {
+    margin: 10px 0 28px 0;
+}
+.night-r {
+    width:1000px;
+    height: 160px;
+    float: right;
+}
+.night-r ul {
+    width: 500%;
+    _width: 400%;
+}
+.night-r li {
+    float: left;
+    margin-right: 1px;
+}
+
+
