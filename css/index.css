@@ -101,6 +101,7 @@ img {
     width: 100%;
     height: 480px;
     position: relative;
+    margin-bottom: 15px; 
 }
 #fs_main{
     height: 100%;
@@ -108,7 +109,7 @@ img {
     float: left; 
 }
  #sliderBox{
-    margin: 0 258px 0 200px;
+    margin: 0 213px 0 180px;
     height: 340px;
     width: 100%;
     float: left;
@@ -126,7 +127,6 @@ img {
 #slider ul{
     width: 3950px;
     height:100%;
-    background-color: #4cae4c;
     position: absolute;
     left:0px;
 }
@@ -194,7 +194,7 @@ img {
 /*轮播脚本开始*/
 #slider_buttom{
      height: 130px;
-     margin: 10px 258px 0 200px;
+     margin: 15px 228px 0 180px;
     width: 790px;
     float: left;  
     overflow: hidden;
@@ -214,10 +214,10 @@ img {
 
 /*左侧菜单开始*/
 .cate_menu  {
-    height: 100%;
-    width: 190px;
+    height: 470px;
+    width: 170px;
     background-color: #6e6568;
-    padding:15px 0;
+    padding-top:15px;
     float:left;
     margin-left: -100%;
 }
@@ -239,7 +239,7 @@ background-color: #999395;
 
 
 .cate_menu .items span {
-    padding: 0 4px;
+    padding: 0 1px;
     font-size: 12px;
 }
 .cate_menu .items a {
@@ -257,7 +257,7 @@ background-color: #999395;
     left: 8999px;
     top: 0;
     width: 998px;
-    min-height: 478px;
+    min-height: 480px;
     border: 1px solid #f7f7f7;
     background-color: #f7f7f7;
     box-shadow: 2px 0 5px rgba(0,0,0,.3); 
@@ -268,7 +268,7 @@ background-color: #999395;
     margin-top: 10px;
     width: 100%;
     height: 24px;
-    background-color: red;
+
 }
 .cate_detail .cate_detail_title a{
     float: left;
@@ -335,16 +335,16 @@ overflow: hidden;;
 
 /*new开始*/
 .news {
-    width: 248px;
+    width: 203px;
     height:100%;
     border: 1px solid #E4E4E4;
     float: left;
-    margin-top: 2px;
-    margin-left:-250px;
+    margin-top: 1px;
+    margin-left:-205px;
 }
 
 .jd-news {
-    height: 200px;
+    height: 220px;
     border-bottom: 1px dashed #E4E4E4;  /*虚线*/
 }
 .jd-news .dt, .lifeservi .dt {
@@ -377,13 +377,13 @@ overflow: hidden;;
 .lifeservi {
     height:251px;
     overflow: hidden;
-    width: 248px;
+    width: 212px;
 }
 .lifeservi ul {
-    width: 252px;
+    width: 212px;
 }
 .lifeservi ul li {
-    width: 62px;
+    width: 50px;
     height: 70px;
     border: 1px solid #e4e4e4;
     border-top: 0;
@@ -400,7 +400,7 @@ overflow: hidden;;
 .lifeservi  li  i{
     position: absolute;
     top:12px;
-    left:18px;
+    left:13px;
     width: 25px;
     height: 25px;
     background: url(../images/icon_lifeserv.png) no-repeat left top;
@@ -486,25 +486,269 @@ overflow: hidden;;
     background: url(../images/song.png) no-repeat right top;
 }
 
-/*11 huodong*/
-.todays {
+/*秒杀*/
+.ms{
+ margin-bottom: 30px; 
+}
+.miaosha {
+    margin: 0 auto;
+    width: 1190px;
+    overflow: hidden;
+}
+.miaosha-top{
+    position: relative;
+    padding: 0 20px 0 30px;
+    height: 55px;
+    line-height: 55px;
+    color: #fff;
+    width: 96%;
+    background-image: url(../images/miaoTop.png);
+}
+.miaosha-contant{
+    padding: 12px 0 13px;
+    height: 225px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+.miaosha-top-left{
+    float: left;
+}
+.miaosha-top .top_hd_flag {
+    background-image: url(../images/flag.png);
+    background-position: -190px -48px;
+    -moz-background-size: 218px 188px;
+    background-size: 218px 188px;
+    background-repeat: no-repeat;
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    left: -4px;
+    top: -4px;
+}
+  .miaosha-top .top_hd_icon{margin-top: 8px;
+    margin-right: 8px;
+    background-image: url(../images/flag.png);
+    background-position: 0 -40px;
+    -moz-background-size: 218px 188px;
+    background-size: 218px 188px;
+    background-repeat: no-repeat;
+    width: 34px;
+    height: 40px;
+    float: left;
+}
+.miaosha-top-tit{
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 40px;
+    height: 40px;
+    padding-top: 9px;
+    float: left;
+}
+.miaosha-top-subtit{
+    float: left;
+    margin-top: 19px;
+    margin-left: 10px;
+    padding-right: 20px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 14px;
+    color: #fff;
     position: relative;
 }
-.night {
-    margin: 10px 0 28px 0;
+.miaosha-top a:hover{
+color: #fff;
 }
-.night-r {
-    width:1000px;
-    height: 160px;
+.miaosha-top-arrow{
+    background-image: url(../images/flag.png);
+    background-position: -154px -40px;
+    background-size: 218px 188px;
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 16px;
+
+    position: absolute;
+    right: 0;
+    top: 4px;
+}
+/*右侧时间*/
+.miaosha-top-rignt {
     float: right;
 }
-.night-r ul {
-    width: 500%;
-    _width: 400%;
-}
-.night-r li {
+.miaosha-top-rignt-inner{
     float: left;
-    margin-right: 1px;
+}
+.sk_cd_tip{
+    float: left;
+    line-height: 45px;
+    padding-top: 10px;
+    font-size: 14px;
+}
+.timer-box{
+    float: left;
+    margin-left: 6px;
+    margin-right: 8px;
+}
+.timer-item{
+    float: left;
+    width: 35px;
+    height: 37px;
+    background-color: #440106;
+    color: #f90013;
+    font-size: 24px;
+    font-family: Arial;
+    font-weight: 700;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 37px;
+    margin-top: 10px;
+}
+.cd_item_txt{
+        color: #f90013;
+    font-size: 24px;
+    font-family: Arial;
+    font-weight: 700;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 37px;
+}
+.cd_split{
+    float: left;
+    margin: 22px 4px 0;
+    width: 4px;
+    height: 12px;
+    font-size: 0;
+    line-height: 0;
+}
+.cd_split_dot {
+    display: block;
+    width: 4px;
+    height: 4px;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    background-color: #440106;
+}
+.cd_split_top {
+    margin-bottom: 4px;
+}
+.sk .cd_split_bottom {
+    top: 30px;
+}
+.goods-detail{
+    float: left;
+    width: 1000px;
+    overflow: hidden;
+    position: relative;
+}
+.miaosha-arr{
+display: block;
+}
+.arr-com{
+    position: absolute;
+    display: block;
+    z-index: 1;
+    top: 50%;
+    margin-top: -25px;
+    width: 25px;
+    height: 50px;
+    background: #5e5e5e;
+    background: rgba(0,0,0,.2);
+    line-height: 50px;
+    text-align: center;
+     cursor: pointer;
+}
+.miaosha-arrleft{
+   
+   left:5px;  
+}
+.miaosha-arrright{
+   
+   right :5px;  
 }
 
+.miaosha-ul{
+    width: 3000px;
+    transform: translateX(-1000px);
+    transition-property: transform;
+    /*(transition-duration: 0.6s;*/
+}
+.miaosha-a-log{
+        margin: 0 8px 0 0;
+    float: right;
+}
+.miaosha-a-log img{
+        display: block;
+    width: 180px;
+    height: 225px;
+}
+.list-item{
+    float: left;
+    width: 170px;
+    height: 225px;
+    padding: 0 14px 0 15px;
+    border-right: 1px solid #e7e7e7;
+}
+.list-item-pic{
+    position: relative;
+    text-align: center;
+}
+.goodli-a{
+    display: block;
+    outline: 0;
+}
+.miaosha-goodliP {
+    color: #999;
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    font-size: 12px;
+    text-align: left;
+    height: 32px;
+    line-height: 16px;
+    word-wrap: break-word;
+    word-break: break-all;
+    cursor: pointer;
+}
+.miaosha-goodliP:hover{
+    color: #f10215;
 
+}
+.miaosha-goodPrice{
+    padding: 3px 0;
+    height: 25px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #f10214;
+
+}
+.goodi{
+font-size: 12px;
+    font-weight: 300;
+}
+.goodpricespan{
+
+
+}
+ .miaosha-goodliImg{   
+    width: 130px;
+    height: 130px;
+    margin: 17px 0;
+    transform: translateY(0);
+    transition: transform .4s ease;
+    cursor: pointer;
+}
+
+.li_item_shadow{
+    position: absolute;
+    left: 0;
+    top: 130px;
+    text-align: center;
+    background-image: url(../images/flag.png);
+    background-position: 0 0;
+    -moz-background-size: 218px 188px;
+    background-size: 218px 188px;
+    background-repeat: no-repeat;
+    width: 170px;
+    height: 20px;
+    }

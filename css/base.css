@@ -91,7 +91,7 @@ s, i, em {
 /*公共类*/
 .w {
     /*版心 提取 */
-    width: 1260px;
+    width: 1190px;
     margin: 0 auto;
 }
 
@@ -302,7 +302,7 @@ s, i, em {
     border-bottom: 2px solid #B1191A;
 }
 .dropdown {
-    width: 190px;
+    width: 170px;
     height: 44px;
     float: left;
     position: relative;
@@ -325,6 +325,7 @@ s, i, em {
     width: 680px;
     height: 44px;
     float: left;
+    margin-left: 50px;
 }
 .navitems li {
     float: left;
@@ -386,7 +387,7 @@ s, i, em {
     margin-left: 304px;
 }
 .shopping dl {
-    width: 198px;
+    width: 192px;
     float: left;
 }
 .shopping dt,
@@ -401,7 +402,7 @@ s, i, em {
 }
 .coverage {
     float: right;
-    width: 210px;
+    width: 220px;
     height: 165px;
     background: url(../images/china.png) no-repeat left bottom;
 }

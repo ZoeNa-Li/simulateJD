@@ -6,8 +6,15 @@
     <link rel="stylesheet" href="css/base.css"/>
     <link rel="stylesheet" href="css/index.css"/>
     <link rel="shortcut icon" href="favicon.ico" />
-     <script type="text/javascript" src="JS/slider.js"></script>
+        <script type="text/javascript" src="Data/miaosha.json"></script>
+    <script type="text/javascript" src="JS/slider.js"></script>
     <script type="text/javascript" src="JS/operate.js"></script>
+    <script type="text/javascript" src="JS/index.js"></script>
+    <script type="text/javascript" src="JS/misha.js"></script>
+    
+    <script type="text/javascript">
+      
+    </script>
 </head>
 <body>
 <!--搜索-->
@@ -100,7 +107,7 @@
         <span class="icon3">8</span>
     </div>
     <div class="hotwords">
-        <a href="#" class="col-red">11月11天</a>
+        <a href="#" class="col-red">满300减100</a>
         <a href="#">100元劵包</a>
         <a href="#">买2免1</a>
         <a href="#">手机专场</a>
@@ -356,11 +363,12 @@
             </div>
             <div class="dd">
                 <ul>
-                    <li><a href="#"><span>[特惠]</span>大牌智能手表12期免息</a></li>
-                    <li><a href="#"><span>[公告]</span>京东成为中国最大家电零售商</a></li>
-                    <li><a href="#"><span>[特惠]</span>美的品牌日 APP嗨购大放“价”</a></li>
-                    <li><a href="#"><span>[公告]</span>京东深入蒙牛生产基地进行质检</a></li>
-                    <li><a href="#"><span>[特惠]</span>京东帮服务店突破1700家</a></li>
+                    <li><a href="#"><span>[特惠]</span>大牌手表12期免息</a></li>
+                    <li><a href="#"><span>[公告]</span>中国最大家电零售商</a></li>
+                    <li><a href="#"><span>[特惠]</span>美的品牌日大放“价”</a></li>
+                    <li><a href="#"><span>[公告]</span>蒙牛基地质检</a></li>
+                    <li><a href="#"><span>[特惠]</span>京东服务店1700家</a></li>
+                    <li><a href="#"><span>[特惠]</span>京东服务店1700家</a></li>
                 </ul>
 
             </div>
@@ -451,21 +459,45 @@
 
 </div>
 
-<!--双11 的某个活动-->
-<div class="w todays clearfix">
-    <div class="night">
-        <div class="night-l fl">
-            <img src="images/night.jpg" alt=""/>
-        </div>
-        <div class="night-r">
-            <ul>
-                <li><a href="#"><img src="images/1.jpg" alt=""/></a></li>
-                <li><a href="#"><img src="images/2.jpg" alt=""/></a></li>
-                <li><a href="#"><img src="images/3.jpg" alt=""/></a></li>
-                <li><a href="#"><img src="images/4.jpg" alt=""/></a></li>
-            </ul>
-        </div>
-    </div>
+<!--秒杀 的某个活动-->
+<div class="w clearfix ms">
+  <div class="miaosha">
+   <div class="miaosha-top" id="miaosha-top">
+     <div class="miaosha-top-left">
+       <i class="top_hd_flag"></i>
+       <i class="top_hd_icon"></i>
+       <h3 class="miaosha-top-tit">京东秒杀</h3>
+       <a href="#"  class="miaosha-top-subtit" id="miaosha-top-subtit" >总有你想不到的低价<i class="miaosha-top-arrow"></i></a>
+     </div>
+     <div class="miaosha-top-rignt">
+       <div class="miaosha-top-rignt-inner">
+         <span class="sk_cd_tip">当前场次</span>
+         <div class="timer-box">
+           <div class="timer-item"><span class="cd_item_txt" id="timer-house"></span></div>
+           <div class="cd_split">
+           <i class="cd_split_dot cd_split_top"></i>
+           <i class="cd_split_dot cd_split_bottom"></i>
+           </div>
+           <div class="timer-item"><span class="cd_item_txt" id="timer-min"></span></div>
+           <div class="cd_split">
+           <i class="cd_split_dot cd_split_top"></i>
+           <i class="cd_split_dot cd_split_bottom"></i>
+           </div>
+           <div class="timer-item"><span class="cd_item_txt" id="timer-sec"></span></div>
+         </div>
+         <span class="sk_cd_tip">后结束抢购</span>
+       </div>
+
+     </div>
+   </div>
+   <div class="miaosha-contant"><div class="goods-detail" id="goods-detail"><ul class="miaosha-ul" id="miaosha-ul"></ul><div id="miaosha-arr" class="miaosha-arr"><span id="miaosha-arrleft" class="miaosha-arrleft arr-com"><</span><span id="miaosha-arrright" class="miaosha-arrright arr-com">></span></div></div>
+     <a href="#" class="miaosha-a-log">
+       <img src="images/mishalog.jpg">
+     </a>
+     <div class="log-goods"></div>
+   </div>
+
+</div>
 </div>
 
 <!--页面底部开始-->
@@ -572,4 +604,5 @@
 </div>
 </body>
 <script type="text/javascript" src="JS/index.js"></script>
+    <script type="text/javascript" src="JS/misha.js"></script>
 </html>

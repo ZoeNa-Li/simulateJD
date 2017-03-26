@@ -1,26 +1,18 @@
+
 function $(id){ return document.getElementById(id)}
 
 var TopBar = $("topbanner");
 var topbarClose = $("topbarClose");
 topbarClose.onclick = function(e){
-var eve=e;
 topbarClose.onclick = null;
-eve.target.parentNode.parentNode.innerHTML= ' ';
+e.target.parentNode.parentNode.innerHTML= ' ';
 };
 
 
-
-/*for(var i = 0; i < CateList.length; i++){
-	var itemLi = CateList[i];
-	itemli.onmouseenter = function(){
-		 $("cate_detail").style.top = 0;
-	}
-}
-*/
 for(var i = 0; i < 15; i++){
 	var item =  $("cate_item"+i);
 	item.onmouseover = function(){
-	this.parentNode.parentNode.nextElementSibling.style.left = '190px';
+	this.parentNode.parentNode.nextElementSibling.style.left = '170px';
 };
 item.onmouseout = function(){
 	this.parentNode.parentNode.nextElementSibling.style.left = '8999px';
@@ -29,7 +21,7 @@ item.onmouseout = function(){
 var cateDetail=$('cate_detail');
 cateDetail.onmouseover=function(e){
 
-e.target.style.left = '190px';
+e.target.style.left = '170px';
 }
 cateDetail.onmouseleave=function(e){
 
@@ -52,3 +44,52 @@ window.onscroll = function(event) {
 	}
 
 };
+//秒杀
+var miaoshaOffset = -1000;
+$("miaosha-arrleft").onclick = function(e){
+if( miaoshaOffset == -1000  ){
+	miaoshaOffset = -2000;
+	}else if( miaoshaOffset == -2000){
+	 miaoshaOffset = -1000 ;
+	
+	}else if( miaoshaOffset == 0){
+		miaoshaOffset = -1000;
+	};
+	$("miaosha-ul").style.transform = "translateX("+ miaoshaOffset+"px)";
+
+	console.log($("miaosha-ul"))
+}
+$("miaosha-arrright").onclick = function(e){
+	if( miaoshaOffset == -1000  ){
+	miaoshaOffset = -2000;
+
+	}else if( miaoshaOffset == -2000){
+	 miaoshaOffset = -1000 ;
+	
+	}else if( miaoshaOffset == 0){
+		miaoshaOffset = -1000;
+	};
+	$("miaosha-ul").style.transform = "translateX("+ miaoshaOffset+"px)";
+	console.log($("miaosha-ul"))
+}
+var tollTime = 6 * 60 *60;
+/*var sect= 60;
+var mineu = 60;
+var house = 60;*/
+var TollMin = 0;
+
+function CountDown(){
+      tollTime--;
+   var   sect = tollTime % 60;
+   var   mineu =Math.floor((tollTime/60)  % 60) ;
+   var   house = Math.floor(tollTime/60/60);
+
+    $("timer-sec").innerHTML = sect;
+    $("timer-min").innerHTML =  mineu;
+    $("timer-house").innerHTML = house;
+
+     if(sect == 0 && mineu == 0 && house == 0){
+     	clearInterval(miaoshaTimer)
+     }
+}
+miaoshaTimer = setInterval(CountDown,1000); 
