@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="favicon.ico" />
         <script type="text/javascript" src="Data/miaosha.json"></script>
     <script type="text/javascript" src="JS/slider.js"></script>
-    <script type="text/javascript" src="JS/operate.js"></script>
+  
     <script type="text/javascript" src="JS/index.js"></script>
     <script type="text/javascript" src="JS/misha.js"></script>
     
@@ -151,13 +151,14 @@
 <div class="w main clearfix">
 <div id="fs">
 <div id="fs_main">
-     <div id="sliderBox" >
-        <script  language="JavaScript" type="text/javascript" src="JS/slider.js"></script>
-        <div id="arr">
-        <span id="left"><</span>
-        <span id="right">></span>
-       </div>
-        <script type="text/javascript" src="JS/operate.js"></script>
+     <div id="sliderBox"  class="sliderBox">
+        <div id="slider">
+            <ul id ="slider-img-ul" style="left: -790px"></ul>
+        </div>
+        <div id="circle"></div>
+        <span id="left" class="arr arrleft"><</span>
+        <span id="right" class="arr arrright">></span>
+       
      </div>
     <div id="slider_buttom">
        <div class="slider_buttomlef"><a href=""><img src="images/sliderfoot1.jpg"></a></div>
@@ -355,7 +356,7 @@
     </div>
 </div>
 
-<div class="news">
+<div class="news" id="news">
         <div class="jd-news">
             <div class="dt">
                 <h3>京东快报</h3>
@@ -604,5 +605,6 @@
 </div>
 </body>
 <script type="text/javascript" src="JS/index.js"></script>
-    <script type="text/javascript" src="JS/misha.js"></script>
+<script  language="JavaScript" type="text/javascript" src="JS/slider.js"></script>
+<script type="text/javascript" src="JS/misha.js"></script>
 </html>

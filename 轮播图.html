@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <style type="text/css">
+        *{
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+        #box{
+            width: 720px;
+            height: 340px;
+            margin: 1px auto;
+            position: relative;
+            border: 1px soild block;
+            overflow: hidden;
+        }
+        #box #list{
+            position: absolute;
+            width:5040px;
+            height: 30px;
+            z-index: 1;
+        }
+        #box #list li{
+            float: left;
+            height: 340px;
+            width:720px;
+        }
+        #buttons {
+            position: absolute;
+            left: 910px;
+            bottom: 50px;
+            z-index: 2;
+            height: 30px;
+            width: 30px;
+        }
+        #buttons li {
+            float: left;
+            margin-right: 20px;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            background: #333;
+            cursor: pointer;
+            list-style: none;
+        }
+        #buttons .on {
+            background: orangered;
+        }
+        .arrow {
+            position: absolute;
+            top: 170px;
+            z-index: 2;
+            display: none;
+            width: 50px;
+            height: 50px;
+            font-size: 30px;
+            /*font-weight: bold;*/
+            line-height: 30px;
+            text-align: center;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+
+        .arrow:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        #box:hover .arrow {
+            display: block;
+        }
+
+        #prev {
+            left: 20px;
+        }
+
+        #next {
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <ul id="list" style="left: -720px">
+
+            <li><a href="#"><img src="images/slider5.jpg"></a></li>
+            <li><a href="#"><img src="images/slider1.jpg"></a></li>
+            <li><a href="#"><img src="images/slider2.jpg"></a></li>
+            <li><a href="#"><img src="images/slider3.jpg"></a></li>
+            <li><a href="#"><img src="images/slider4.jpg"></a></li>
+            <li><a href="#"><img src="images/slider5.jpg"></a></li>
+            <li><a href="#"><img src="images/slider1.jpg"></a></li>
+
+        </ul>
+        <ul id="buttons">
+            <li index="1" class="on"></li>
+            <li index="2"></li>
+            <li index="3"></li>
+            <li index="4"></li>
+            <li index="5"></li>
+        </ul>
+        <a href="javascript:" id="prev" class="arrow" >&lt;</a>
+        <a href="javascript:" id="next" class="arrow" >&gt;</a>
+    </div> 
+    <script src='D:\翾file\web前端\tools\tools.js'></script>
+    <script>
+        window.onload = function() {
+            var list = document.getElementById('list');
+            var prev = document.getElementById('prev');
+            var next = document.getElementById('next');
+            var box = document.getElementById('box');
+            var timer;
+            function animate(offset) {//这里的offset是当前图片的索引, 例如第一张, 第二张这样
+                var change = offset * -790;
+                startMove(list, {left: change}, function(){});
+            }           
+
+
+
+            function play() {
+                timer = setInterval(function () {
+                next.onclick()
+                }, 1500)
+            }
+            play();
+            function stop() {
+                clearInterval(timer);
+            }
+            box.onmouseover = stop;//当鼠标停留在图片区域时停止滚动
+            box.onmouseout = play;//当鼠标离开图片区域时开始滚动
+
+
+
+            prev.onclick = function() {//左点击函数
+                index--;
+                if (index < 1) {//这里的目的主要在于可以使图片轮播形成完整的圆柱无缝衔接效果, 即当图片位于第一张, 点击左切换按钮时, 我们在上面html部分设置7张图片就起了作用, 现在将当前图片直接位置定位到第七张图片, 直接修改不用动画改变(参阅上面的html结构, 我们的第七章照片和第一张是一样的).
+                    index = 5;
+                    list.style.left = -4740 + 'px';//-图片宽790*6
+                }
+                    buttonsShow();
+                    animate(index);
+            }
+            next.onclick = function() {//这个目的同上.
+                index++;
+                if (index > 5) {
+                    index = 1;
+                     list.style.left = 0+ 'px';
+                }
+                buttonsShow();
+                animate(index);
+            }
+
+
+            // 以下为buttons
+            var buttons = document.getElementById('buttons').getElementsByTagName('li');
+            var index = 1;
+            function buttonsShow() {//圆点样式显示, 给绑定一个class属性就成
+                for (var i = 0; i < buttons.length; i++) {
+                    if (buttons[i].className == 'on') {
+                        buttons[i].className = '';
+                    }
+                }
+                buttons[index-1].className = 'on';
+            }
+            for (var i = 0; i < buttons.length; i++) {
+                    (function(j){//这里由于关系到闭包因此我们处理一下
+                        buttons[j].onmouseenter  = function () {
+                            console.log(j);
+                            var clickIndex = parseInt(this.getAttribute('index'));
+                            animate(clickIndex); //存放鼠标点击后的位置，用于小圆点的正常显示 
+                            index = clickIndex;
+                            buttonsShow();
+                        }
+                    })(i)
+                }
+            }
+
+
+            //平缓运动函数
+            function startMove(obj, changeData, func) {
+                //我们将这个定时器绑到该元素上便于清除与管理
+                clearInterval(obj.timer);
+                var iCurValue = 0;
+                var iSpeed = 0;
+                var bStop;
+                obj.timer = window.setInterval(function () {
+                    bStop = true;//判断当前所有动作是否全部执行完毕
+                    iCurValue = parseInt(getStyle(obj, 'left'));
+                    iSpeed = (changeData['left'] - iCurValue) / 7;//缓冲运动效果
+                    if(iSpeed > 0) {//为防止在最后的部分运动距离过小, 因此在这里向上向下取整
+                        iSpeed = Math.ceil(iSpeed);
+                    }else{
+                        iSpeed = Math.floor(iSpeed);
+                    }
+                    obj.style['left'] = iCurValue + iSpeed + 'px';
+                    if(iCurValue !== changeData['left']) {
+                        bStop = false;
+                    }
+                    if(bStop) {
+                        //整个动作执行完毕
+                        flag = 0;
+                        clearInterval(obj.timer);
+                        func();//当全部动作执行完毕之后, 执行回调函数.
+                    }
+                }, 30);
+            }
+    </script>
+</body>
+</html>

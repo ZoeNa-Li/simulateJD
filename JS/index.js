@@ -56,8 +56,6 @@ if( miaoshaOffset == -1000  ){
 		miaoshaOffset = -1000;
 	};
 	$("miaosha-ul").style.transform = "translateX("+ miaoshaOffset+"px)";
-
-	console.log($("miaosha-ul"))
 }
 $("miaosha-arrright").onclick = function(e){
 	if( miaoshaOffset == -1000  ){

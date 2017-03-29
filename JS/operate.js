@@ -82,13 +82,6 @@ timer = setInterval(autoplay,4000);
 //    clearInterval(timer);
 //    //alert("鼠标经过")
 //})
-$("slider-img-ul").onmouseover = function(){
-    clearInterval(timer);
-}
-
-$("slider-img-ul").onmouseout = function(){
-    timer = setInterval(autoplay,4000);
-}
 
 
 

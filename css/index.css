@@ -102,6 +102,7 @@ img {
     height: 480px;
     position: relative;
     margin-bottom: 15px; 
+    overflow: hidden;
 }
 #fs_main{
     height: 100%;
@@ -113,6 +114,7 @@ img {
     height: 340px;
     width: 100%;
     float: left;
+   position:relative;
    /* background-color: pink;*/
 }
 
@@ -122,13 +124,14 @@ img {
     height: 100%;
     position:relative;
     overflow: hidden;
+  
 }
 
 #slider ul{
-    width: 3950px;
+    width: 5530px;
     height:100%;
     position: absolute;
-    left:0px;
+    left:-790px;
 }
 #slider ul li{
     float: left;
@@ -139,15 +142,17 @@ img {
  float:left;
 }
 /*为量侧箭头设置*/
-#arr{
-    /*display: none;*/
-    z-index: 1;
-}
-#arr span{
+
+#slider:hover .arr {
+    display: block;
+        }
+ .arr{
+    cursor: pointer;
+    display: block;
+    z-index: 999;
     width:30px; height:50px;
     position:absolute;
-    left:200px;
-    top:30%;
+    top:170px;
     margin-top:-15px;
     background:#5e5e5e;
     cursor:pointer;
@@ -159,16 +164,18 @@ img {
     color:#fff;
     opacity:0.3;
     border:1px solid #fff;}
-#arr #right{
-    right:268px;
-    left: auto;
+ .arrleft{
+   left:10px; 
+}
+.arrright{
+    left:750px;  
 }
 /*原点CSS*/
 #circle{
     position: absolute;
     left: 45%;
-    z-index: 2;
-    margin-left: -60px;
+    z-index:2;
+    margin-left: -200px;
     top: 300px;
 }
 #circle span{
@@ -204,7 +211,7 @@ img {
     height: 130px;
     float: left;
     margin-right: 10px;
-}
+} 
 #slider_buttom .slider_buttomrig{
     width: 390px;
     height: 130px;
@@ -341,6 +348,9 @@ overflow: hidden;;
     float: left;
     margin-top: 1px;
     margin-left:-205px;
+}
+#news a:hover{
+    color: #B1191A; 
 }
 
 .jd-news {
