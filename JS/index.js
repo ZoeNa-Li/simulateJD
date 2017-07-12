@@ -68,7 +68,6 @@ $("miaosha-arrright").onclick = function(e){
 		miaoshaOffset = -1000;
 	};
 	$("miaosha-ul").style.transform = "translateX("+ miaoshaOffset+"px)";
-	console.log($("miaosha-ul"))
 }
 var tollTime = 6 * 60 *60;
 /*var sect= 60;
