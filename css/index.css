@@ -149,7 +149,7 @@ img {
  .arr{
     cursor: pointer;
     display: block;
-    z-index: 999;
+    z-index: 10;
     width:30px; height:50px;
     position:absolute;
     top:170px;
